@@ -24,7 +24,7 @@ uses
 
 type
   TFrm = class(TForm)
-    RDP: TMsRdpClient2;
+    RDP: TMsRdpClient7NotSafeForScripting;
     procedure RDPDisconnected(ASender: TObject; discReason: Integer);
     procedure FormCreate(Sender: TObject);
   private
