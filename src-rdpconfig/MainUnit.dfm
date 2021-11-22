@@ -2,7 +2,7 @@ object MainForm: TMainForm
   Left = 0
   Top = 0
   BorderStyle = bsDialog
-  Caption = 'RDP Wrapper Configuration'
+  Caption = 'RDP Wrapper Configuration utility by sebaxakerhtc'
   ClientHeight = 314
   ClientWidth = 404
   Color = clBtnFace
@@ -11,7 +11,6 @@ object MainForm: TMainForm
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poDesktopCenter
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -109,37 +108,67 @@ object MainForm: TMainForm
     object lsListener: TLabel
       Left = 91
       Top = 55
-      Width = 44
+      Width = 52
       Height = 13
       Caption = 'Unknown'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object lsService: TLabel
       Left = 91
       Top = 36
-      Width = 44
+      Width = 52
       Height = 13
       Caption = 'Unknown'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object lsTSVer: TLabel
       Left = 226
       Top = 36
-      Width = 44
+      Width = 52
       Height = 13
       Caption = 'Unknown'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object lsWrapper: TLabel
       Left = 91
       Top = 17
-      Width = 44
+      Width = 52
       Height = 13
       Caption = 'Unknown'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object lsWrapVer: TLabel
       Left = 226
       Top = 17
-      Width = 44
+      Width = 52
       Height = 13
       Caption = 'Unknown'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object lTSVer: TLabel
       Left = 202
@@ -165,9 +194,15 @@ object MainForm: TMainForm
     object lsSuppVer: TLabel
       Left = 202
       Top = 55
-      Width = 70
+      Width = 84
       Height = 13
       Caption = '[support level]'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
   end
   object gbGeneral: TGroupBox
@@ -227,7 +262,7 @@ object MainForm: TMainForm
       Top = 115
       Width = 169
       Height = 17
-      Caption = 'Allow to start custom programs'
+      Caption = 'Allow unlisted RemoteApps'
       TabOrder = 4
       OnClick = cbAllowTSConnectionsClick
     end
