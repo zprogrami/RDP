@@ -3,4 +3,4 @@
 ### All thanks for the project to [Stas'M](https://github.com/stascorp/rdpwrap)
 
 ### Building the binaries:
-- **x86 Delphi version** can be built with *Embarcadero RAD Studio 10.4*
+- **x86 Delphi version** can be built with *Embarcadero RAD Studio 11*
