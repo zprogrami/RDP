@@ -8,3 +8,6 @@
 ### Manual on and off H264 priority:
 - Download [LGPO](https://www.microsoft.com/en-us/download/details.aspx?id=55319)
 - Use files H264_ON and H264_OFF
+
+### Binary files content:
+Installer and uninstaller assembled and can be disassembled using freeware [Bat to Exe Converter](https://web.archive.org/web/20190305143024/http://f2ko.de/en/b2e.php)
