@@ -142,7 +142,7 @@ object MainForm: TMainForm
     Width = 272
     Height = 183
     BiDiMode = bdLeftToRight
-    Caption = 'Diagnostics'
+    Caption = ' Diagnostics'
     DefaultHeaderFont = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -307,7 +307,7 @@ object MainForm: TMainForm
     Width = 268
     Height = 181
     BiDiMode = bdLeftToRight
-    Caption = 'General Settings'
+    Caption = '      General Settings'
     DefaultHeaderFont = False
     HeaderFont.Charset = DEFAULT_CHARSET
     HeaderFont.Color = clWindowText
@@ -418,7 +418,7 @@ object MainForm: TMainForm
     Hint = 
       'Choose your resolution. We prefore "mstsc" button. You can click' +
       ' every button many times ;)'
-    Caption = 'Check yor settings with mstsc'
+    Caption = '         Check yor settings with mstsc'
     DefaultHeaderFont = False
     HeaderFont.Charset = DEFAULT_CHARSET
     HeaderFont.Color = clWindowText

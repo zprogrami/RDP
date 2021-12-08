@@ -15,7 +15,7 @@ unit MainUnit;
 interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, Spin, ExtCtrls, WinSvc, MSTSCLib_TLB, Registry, ShellAPI;
+  Dialogs, StdCtrls, Spin, ExtCtrls, WinSvc, Registry, ShellAPI;
 type
   TMainForm = class(TForm)
     bOK: TButton;

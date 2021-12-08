@@ -81,12 +81,14 @@
     <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
         <AppEnableRuntimeThemes>true</AppEnableRuntimeThemes>
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
-        <VerInfo_Keys>CompanyName=Thanks to Stas&apos;M Corp for this project;FileDescription=RDP Wrapper Configuration and Check utility by sebaxakerhtc;FileVersion=1.8.6.0;InternalName=RDP Wrapper Configuration and Check utility by sebaxakerhtc;LegalCopyright=sebaxakerhtc;LegalTrademarks=Stas&apos;M Corp;OriginalFilename=RDP_C&amp;C;ProductName=RDP_C&amp;C;ProductVersion=1.8.6.0;Comments=https://sebaxakerhtc.github.io;ProgramID=com.embarcadero.RDP_C&amp;C</VerInfo_Keys>
+        <VerInfo_Keys>CompanyName=Thanks to Stas&apos;M Corp for this project;FileDescription=RDP Wrapper Configuration and Check utility by sebaxakerhtc;FileVersion=1.8.6.1;InternalName=RDP Wrapper Configuration and Check utility by sebaxakerhtc;LegalCopyright=sebaxakerhtc;LegalTrademarks=Stas&apos;M Corp;OriginalFilename=RDP_CnC;ProductName=RDP_CnC;ProductVersion=1.8.6.1;Comments=https://sebaxakerhtc.github.io;ProgramID=com.embarcadero.RDP_CnC</VerInfo_Keys>
         <Icon_MainIcon>RDP_B.ico</Icon_MainIcon>
         <AppExecutionLevel>requireAdministrator</AppExecutionLevel>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_MinorVer>8</VerInfo_MinorVer>
         <VerInfo_Release>6</VerInfo_Release>
+        <DCC_ExeOutput>C:\Users\sebaxakerhtc\Desktop\RDPWrapper\RDPW_Installer-Black\</DCC_ExeOutput>
+        <VerInfo_Build>1</VerInfo_Build>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
@@ -165,8 +167,6 @@
                     <VersionInfoKeys Name="Comments">http://stascorp.com</VersionInfoKeys>
                 </VersionInfoKeys>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k280.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp280.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dcloffice2k280.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
                     <Excluded_Packages Name="$(BDSBIN)\dclofficexp280.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
@@ -991,8 +991,8 @@
                 <ProjectRoot Platform="OSX64" Name="$(PROJECTNAME).app"/>
                 <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="OSXARM64" Name="$(PROJECTNAME).app"/>
-                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="Android64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="Linux64" Name="$(PROJECTNAME)"/>
                 <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
