@@ -615,18 +615,23 @@ begin
   Str.Free;
 end;
 
-function GitINIFile(var Content: String): Boolean;
+function GitINIFile(var Content: String; INI_source: String): Boolean;
 const
-  URL = 'https://raw.githubusercontent.com/sebaxakerhtc/rdpwrap.ini/master/rdpwrap.ini';
+  DEFAULT_URL = 'https://raw.githubusercontent.com/sebaxakerhtc/rdpwrap.ini/master/rdpwrap.ini';
 var
   NetHandle: HINTERNET;
   UrlHandle: HINTERNET;
   Str: String;
   Buf: Array[0..1023] of Byte;
   BytesRead: DWORD;
+  URL: String;
 begin
   Result := False;
   Content := '';
+  if INI_source = '' then
+    URL := DEFAULT_URL
+  else
+      URL := INI_source;
   NetHandle := InternetOpen('RDP Wrapper Update', INTERNET_OPEN_TYPE_PRECONFIG, nil, nil, 0);
   if not Assigned(NetHandle) then
     Exit;
@@ -706,7 +711,7 @@ begin
   begin
     Writeln('[*] Downloading latest INI file...');
     OnlineINI := TStringList.Create;
-    if GitINIFile(S) then begin
+    if GitINIFile(S, '') then begin
       OnlineINI.Text := S;
       S := ExtractFilePath(ExpandPath(WrapPath)) + 'rdpwrap.ini';
       OnlineINI.SaveToFile(S);
@@ -1070,7 +1075,7 @@ begin
   Result := True;
 end;
 
-procedure CheckUpdate;
+procedure CheckUpdate(source: String);
 var
   INIPath, S: String;
   Str: TStringList;
@@ -1082,7 +1087,7 @@ begin
   Writeln('[*] Current update date: ',
     Format('%d.%.2d.%.2d', [OldDate div 10000, OldDate div 100 mod 100, OldDate mod 100]));
 
-  if not GitINIFile(S) then begin
+  if not GitINIFile(S, source) then begin
     Writeln('[-] Failed to download latest INI from GitHub.');
     Halt(ERROR_ACCESS_DENIED);
   end;
@@ -1145,13 +1150,14 @@ begin
   ) then
   begin
     Writeln('USAGE:');
-    Writeln('RDPWInst.exe [-l|-i[-s][-o]|-w|-u[-k]|-r]');
+    Writeln('RDPWInst.exe [-l|-i[-s][-o]|-w[url]|-u[-k]|-r]');
     Writeln('');
     Writeln('-l          display the license agreement');
     Writeln('-i          install wrapper to Program Files folder (default)');
     Writeln('-i -s       install wrapper to System32 folder');
     Writeln('-i -o       online install mode (loads latest INI file)');
     Writeln('-w          get latest update for INI file');
+    Writeln('-w URL      get latest update for INI file from custom source');
     Writeln('-u          uninstall wrapper');
     Writeln('-u -k       uninstall wrapper and keep settings');
     Writeln('-r          force restart Terminal Services');
@@ -1291,7 +1297,10 @@ begin
       Halt(ERROR_INVALID_FUNCTION);
     end;
     Writeln('[*] Checking for updates...');
-    CheckUpdate;
+    if paramStr(2) = '' then
+      CheckUpdate('')
+    else
+      CheckUpdate(paramStr(2));
   end;
 
   if ParamStr(1) = '-r' then
