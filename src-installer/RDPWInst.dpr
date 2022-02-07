@@ -1106,7 +1106,10 @@ begin
 
       Writeln('[*] Terminating service...');
       AddPrivilege('SeDebugPrivilege');
-      KillProcess(TermServicePID);
+      //KillProcess(TermServicePID);
+      WinExec('cmd /c net stop UmRdpService /y', 1); //fix for Hyper-V VMs
+      Sleep(1000);
+      WinExec('cmd /c net stop termService /y', 1);
       Sleep(1000);
 
       if Length(ShareSvc) > 0 then
@@ -1125,6 +1128,7 @@ begin
       Str.Free;
 
       SvcStart(TermService);
+      SvcStart('UmRdpService');
 
       Writeln('[+] Update completed.');
     end else
