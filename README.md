@@ -11,3 +11,10 @@
 
 ### Binary files content:
 Installer and uninstaller assembled and can be disassembled using freeware [Bat to Exe Converter](https://web.archive.org/web/20190305143024/http://f2ko.de/en/b2e.php)
+
+### Installation:
+- Disable your antivirus software
+- Run Installer or Installer Black
+- Add exclusion for "C:\Program Files\RDPWrapper" folder
+- Enable your antivirus software
+- Enjoy!
