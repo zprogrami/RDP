@@ -15,6 +15,6 @@ Installer and uninstaller assembled and can be disassembled using freeware [Bat 
 ### Installation:
 - Disable your antivirus software
 - Run Installer or Installer Black
-- Add exclusion for "C:\Program Files\RDPWrapper" folder
+- Add exclusion for "C:\Program Files\RDP Wrapper" folder
 - Enable your antivirus software
 - Enjoy!
